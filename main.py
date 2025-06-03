@@ -104,7 +104,7 @@ def generate_text_with_langchain(prompt):
     # Create a chat prompt template with system instructions
     prompt_template = ChatPromptTemplate.from_messages([
         SystemMessage(
-            content="你是一名廚師，負責給出料理食譜。請以繁體中文做回覆，每次回覆不能超過500字，與食物無關的問題請回答:抱歉，我不了解。"),
+            content="你是一名廚師，請回答料理相關問題。如果被問及一道料理，請給出該料理的多種製作方式與食譜。請以繁體中文做回覆，每次回覆不能超過500字，與食物無關的問題請回答:抱歉，我不了解。"),
         HumanMessage(content=prompt)
     ])
 
